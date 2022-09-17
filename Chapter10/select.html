@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select title="option" name="mySelectBox">
+        <option>First Option</option>
+        <option>Second Option</option>
+        <option>Third Option</option>
+    </select>
+<br>
+
+<select title="box"name="mySelectBox">
+    <option value="1">First Option</option>
+    <option value="2">Second Option</option>
+    <option value="3">Third Option</option>
+    <br>
+
+    <form name="myForm">
+        <select name="mySelect" multiple size="3">
+            <option>First option</option>
+            <option>Second option</option>
+            <option>Third option</option>
+        </select>
+    </form>
+</select>
+
+<script>
+    var len = document.myForm.mySelect.length;
+        var userChoices = "";
+
+        for (var i = 0; i < len; i++) {
+        if (document.myForm.mySelect.options[i].selected) {
+        //code to execute if option is selected
+            userChoices += mySelect.options//either the option's text or value
+}
+}
+
+
+
+
+
+</script>
+</body>
+</html>

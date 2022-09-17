@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>React Password Assignment</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0-alpha1/JSXTransformer.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    </head>
+    <body>
+    <script type="text/jsx">
+    class PasswordStrength extends React.Component {
+        constructor() {
+            super();
+            this.state = {          
+                type: "password",
+                textValue: "Easy",
+                displayMeter: "none",
+                meterColor: "",
+                meterStrength: '0%'
+            };
+        }
+
+        onPasswordChange(e) {
+            var count = 0;
+            var vlen = e.target.value.length;
+            if(e.target.value.match(/(?=.*[a-z])/)) {
+                count++;
+            }
+            if(e.target.value.match(/(?=.*[A-Z])/)) {
+                count++;
+            }
+            if(e.target.value.match(/(?=.*\d)/)) {			
+                count++;
+            }
+            if(e.target.value.match(/(?=.*[!#$%&?*@ "])/)) {
+                count++;
+            }
+            this.updatePasswordStrength(count, vlen);
+        }
+
+        updatePasswordStrength(count, vlen) {
+            if(vlen >= 6) {
+                switch(count) {
+                    case 4:
+                        this.textMeter("Strong","block",'#00A344','100%');
+                        break;
+                    case 3:
+                        this.textMeter("Medium","block",'#0000FF','70%');
+                        break;
+                    case 1 || 2:
+                        this.textMeter("Easy","block",'#FF0000','30%');
+                        break;
+                }
+            } else {
+                this.textMeter("Invalid Password Minimum length is 6 Characters","block","",'0%');			
+            }
+        }
+
+        textMeter(tValue, dMeter, mColor, mWidth) {
+            this.setState({textValue:tValue, displayMeter:dMeter, meterColor:mColor, meterStrength:mWidth});
+        }
+
+        render() {      
+            return (                            
+                <div>
+                    <div>&nbsp;</div>
+                    <label htmlFor="myPassword" style={{fontSize: '18px'}}>Create Password: </label> <br />
+                    <input type="text" name="myPassword" placeholder="Enter Password" class="form-fields" id="myPassword" onKeyUp={this.onPasswordChange.bind(this)} style={{height: '35px', width: '550px', borderRadius: 3, paddingLeft: '5px'}} />
+                    <div style={{width: '550px', height: '18px', border: '1px solid', borderRadius: 3, margin: '10px auto'}}>
+                        <div style={{backgroundColor:this.state.meterColor, width:this.state.meterStrength, height: '100%', transition: 'width 0.5s ease-in-out'}}></div>
+                    </div>
+                    <span style={{display:this.state.displayMeter}}>{this.state.textValue}</span>
+                    <div>
+                        <div>&nbsp;</div>
+                        <div className="text-primary text-left">1) Minimum length is 6 character.</div>
+                        <div className="text-primary text-left">2) Password should be the combination of number & characters.</div>
+                        <div className="text-primary text-left">3) Password should contain atleast one symbol.</div>
+                    </div>
+                </div>
+            )
+        }
+    }
+
+    class PasswordMeter extends React.Component {
+        render() {
+            return (
+                <div>
+                    <PasswordStrength />
+                </div>
+            )
+        }
+    }
+
+    ReactDOM.render (
+        <PasswordMeter/>,
+        document.getElementById('root')
+    )
+        </script>
+        <div class="container">
+            <div class="col-sm-3"></div>
+            <div id="root" class=" row col-sm-6 col-offset-sm-3 text-center"></div>
+        </div>
+    </body>
+</html>
