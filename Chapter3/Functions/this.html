@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>This Keyword</h1>
+    <a href="https://www.w3schools.com/js/js_this.asp"> Understanding THIS</a>
+</head>
+<body onload="alert(this)">
+    <h1 onclick="alert(this)">CIW JavaScript Specialist</h1>
+    <script>
+
+   /* var color = "red";
+    alert(this);
+    alert(this.color); */
+
+    var color = "red"; 
+
+    function whatIsThis() {
+    var color = "blue";
+    alert(this);
+    alert(this.color);
+}
+        whatIsThis(); // The window object is still the owner of the code inside function whatIsThis()
+
+
+    </script>
+</body>
+</html>

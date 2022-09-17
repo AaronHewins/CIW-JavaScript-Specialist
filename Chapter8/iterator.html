@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+        // ITERATOR
+        for (let name of ['Mark', 'Pete']) {
+        console.log(name);
+        }
+        //Output:
+        //Mark
+        //Pete
+        
+        
+        
+        // FOR...OF LOOP
+        const numbers = [1,2,3,4,5]
+         
+        for (const x of numbers) {
+            console.log(x)
+
+        }
+
+        const numbersIterator = numbers[Symbol.iterator]() // access property of array
+
+        
+        console.log(numbersIterator.next())
+        console.log(numbersIterator.next())
+        console.log(numbersIterator.next())
+        console.log(numbersIterator.next())
+
+        function squared(max){
+            return {
+                [Symbol.iterator]() {
+
+
+                    let n = 0
+                    return {
+                        next() {
+                            n++
+                            if (n <= max){
+                                return{
+                                    value: n * n,
+                                    done : false
+                                }
+                            }
+                            return {
+                                value: undefined,
+                                done: true
+                            }
+        
+                        }
+                    }
+                }
+
+
+
+
+                }
+
+                
+            }
+
+
+
+        for (const n of squared(10)) {
+            console.log(n)
+
+        }
+            
+
+        const [a,b,c] = [4,5,6]
+
+        //console.log(a,b,c)
+
+        const [d,e,f] = squared(10)
+        //console.log(d,e,f)
+
+
+        //  ENTRIES() METHOD convert an object into an array of key-value pairs
+        // loops over objects easily
+
+       // open("https://www.youtube.com/watch?v=v5rjPGUccOY")
+
+        var example = ["Value1", "Value2", "Value3"];
+        var obj1 = example.entries();
+        for (let x of obj1) {
+        console.log(x);
+        }
+        // Output:
+        // [0, "Value1"]
+        // [1, "Value2"]
+        // [2, "Value3"]
+
+        const person = {
+            name: "Aaron",
+            age: 28
+        }
+        
+        console.log(Object.entries(person)) // call global object not direct object
+
+        // KEYS () METHOD 
+
+
+
+                    /**********************************
+            Object.keys(obj)
+            Object.values(obj)
+            Object.entries(obj)
+            Create an iterable object from the Object
+            **********************************/
+
+
+            //open("https://www.youtube.com/watch?v=VmicKaGcs5g")
+
+
+            let westeros = {
+                cersei: 'Lannister',
+                arya: 'Stark',
+                jon: 'Snow',
+                brienne: 'Tarth',
+                daenerys: 'Targaryen',
+                theon: 'Greyjoy',
+                jorah: 'Mormont',
+                margaery: 'Tyrell',
+                sandor: 'Clegane',
+                samwell: 'Tarly',
+                ramsay: 'Bolton'
+            }
+
+            //for(let prop of arr)
+            // foreach( )  filter( ) map() reduce()
+
+            let keys = Object.keys(westeros); // array of keys
+            //console.log('Keys ', keys);
+            let vals = Object.values(westeros); // array of values 
+            //console.log('Vals', vals);
+            let entries = Object.entries(westeros); // array of keys and values []
+            console.log('Entries', entries);
+            console.log( entries[2][1] ); 
+
+    </script>
+</body>
+</html>

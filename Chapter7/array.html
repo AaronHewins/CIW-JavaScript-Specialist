@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <a href="https://www.youtube.com/watch?v=SXb5LN_opbA">Click me</a>
+    <a href="https://www.youtube.com/watch?v=P4RAFdZDn3M">Check this out</a>
+</head>
+<body>
+    <script>
+     
+
+        
+        var answers = new Array(30, "Vivien Leigh", "Tyrnavos");
+        //document.write(answers[0]); // outputs 30
+        //document.write(answers[1]); // outputs Vivien Leigh
+        //document.write(answers[2]); // outputs Tyrnavos
+
+        // JOIN method seperates the elements value
+        var myArray = new Array(2,3,4);
+        var myArray2 = new Array("A","B","C","D");
+        var myArrayString = myArray.join("apples"); // can join no matter the data type
+        var myArrayString = myArray.join(9)
+        var myArrayString2 = myArray2.join("X")
+        //document.write(myArrayString2);
+
+        // REVERSE method
+        var myArray = new Array("value 1", "value 2", "value 3");
+        myArray.reverse();
+        //document.write(myArray);
+
+
+        // SORT method
+        var myArray = new Array("my dog", "your cat", "her fish");
+        myArray.sort();
+        //document.write(myArray);// her fish,my dog,your cat
+
+
+        // PUSH method
+        var firstArray = ["Fee", "Fi", "Fo"]
+        firstArray.push("Fum");
+        // alert(firstArray); // output = Fee, Fi, Fo, Fum
+
+        // POP method
+        var firstArray = ["Fee", "Fi", "Fo"]
+        var popArr = firstArray.pop();
+        //alert(popArr); // output = Fo because the last item in the array
+
+        // SHIFT method
+        var firstArray = ["Curly", "Larry", "Moe"]
+        var secondArray = firstArray.shift();
+        //alert(secondArray); // output = Curly first item in array
+        //document.write(firstArray) // output = Larry and Moe, Curly removed earlier
+
+
+        // UNSHIFT method
+        var firstArray = ["Curly", "Larry", "Moe"]
+        var showArr = firstArray.unshift("Aaron")
+        //alert(showArr) // output = 4
+
+        var questions = new Array();
+        questions[0] = "What is 5 * 6?";
+        questions[1] = "Who played Scarlett O'Hara?";
+        questions[2] = "Which horse won the 1980 Irish Derby?";
+        questions[3] = "Where does the president live?";
+       
+        // alert(questions.length); output = 4
+        
+        var len = questions.length; // 4
+
+        for (i = 0; i < len; i++) {    // for loop             
+       // document.write("<p>" + questions[i] + "</p>");
+    
+}
+    
+        // FOR EACH METHOD
+        const numbers = [1,2,3,4,5,6,7]
+        
+        numbers.forEach(consoleItem);
+
+        function consoleItem(item, index,arr) {
+            console.log('a[' + index + '] = ' + item)
+        }
+
+        var fruitsArray = ["apples","pears","grapes"]
+
+        function consoleItem(item, index,arr) {
+            console.log(arr)
+        }
+
+        fruitsArray.forEach(consoleItem)
+                            
+
+        // MAP METHOD
+        var arr = [ 0, 1, 2];
+        var arrcall = arr.map (function add(num) {
+            return num+100; } );
+
+        //document.write(arrcall); output = 100,101,102 new array
+
+        const secnumber = [1,2,3,4,5]
+        
+        const numdub = secnumber.map(double)
+
+        function double(value, index, arr) {
+            return value * 2
+        }
+
+
+        const mulnum = secnumber.map(multiply)
+        function multiply(value, index, arr){
+            return value * index
+        }
+
+
+        // this is a bit much see below
+        const random = [
+
+        { name: 'laptop',
+            price: 1000,
+            count: 4
+        },
+        {
+            name: 'desktop',
+            price: 2000,
+            count:2
+
+        },
+        { 
+            name: 'phone',
+            price: 500,
+            count: 10
+
+
+
+
+        }
+
+
+                        ]
+
+            const totalProductsValue = random.map(item => item.price * item.count)
+
+            console.log(totalProductsValue)
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

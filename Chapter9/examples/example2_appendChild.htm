@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Example: appendChild</title>
+
+<script type="text/javascript">
+   var appendedText = "";
+   function AnswerWrong(){
+     var txt = 'Wrong Answer!';
+     var newtext = document.createTextNode(txt);
+     var appendedText = window.document.body.appendChild(newtext);
+	}
+   function AnswerRight(){
+     var txt = 'RIGHT ANSWER!';
+     var newtext = document.createTextNode(txt);
+     var appendedText = window.document.body.appendChild(newtext);
+	    } 
+
+
+       var numbers_mutiplied = 3
+       
+   </script>
+</head>
+
+<body id="body">
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+Question:  How many little pigs had houses made of straw?<br />
+<form name="formButtons">
+<p> <input type="button" onclick="AnswerRight();this.disabled=true;" name="button1" value="1 little pig" /></p>
+<p> <input type="button" onclick="AnswerWrong();this.disabled=true;" name="button2" value="2 little pigs" /></p>
+<p> <input type="button" onclick="AnswerWrong();this.disabled=true;" name="button3" value="3 little pigs" /></p>
+<p> 
+<input type="button" value="Reload Page" onclick="window.location.reload()"/>
+</p>
+</form>
+</body>
+</html>

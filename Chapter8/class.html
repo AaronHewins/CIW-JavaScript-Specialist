@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Shapes { // class expression, unnamed
+        constructor(sides) {
+            this.sides = sides;
+        }
+        display() {
+            document.write('This shape has ' + this.side + ' sides.');
+        }
+        }
+
+        class Rectangle extends Shapes {
+            display() {
+            document.write('A rectangle has ' + this.side + ' sides.');
+            }
+}
+
+
+
+
+
+
+
+        // class declaration
+        class Person {
+            constructor (name, year_born) {
+                this.name = name;
+                this.year_born = year_born
+            }
+                        // functions to use 
+                        get age() {
+                            return this.calcAge()
+                        }
+
+                        calcAge() {
+                            return new Date().getFullYear() - this.year_born
+                        }
+                        
+                        what() {
+                            console.log(this.name + "is a person")
+                        }
+                        static arms() {
+                            return 2
+                        }
+                        }
+
+
+                var me = new Person("Aaron", 1995) // access the Person class bleuprint
+                console.log(me.name + "was born in" + me.year_born)
+
+                var metoo = new Person("Kyle",1999) // another person who has can use class
+                //alert(metoo.age)
+
+                me.what(); // output = Aaron is a person
+                
+
+                // STATIC FUNCTION
+               // alert(console.log(me.name + "has" + Person.arms() + " arms!")) // can access the class directly 
+                
+                //alert(me.name + "has" + me.arms() + " arms!") // output = error me.arms is not a function
+                
+
+                class Juggler extends Person {
+                    what() {
+                        super.what() // calls Functions from parent class 
+                        console.log(this.name + " is a juggler.")
+                    }
+                }
+
+
+                    var you = new Juggler ("Jay, 1989")
+                    me.what();
+                    you.what();
+
+                    
+                    
+                    
+                    
+                    
+                    // PROTOTYPE BASED INHERITANCE
+                    function Employee(first, last, id, dept) {
+                    this.first = first;
+                    this.last = last;
+                    this.id = id;
+                    this.dept = dept
+                    this.company = "CIW"; // add property yo prototype you must add it to constructor function
+                    this.display = function() {return this.first + " " + this.last}
+                    }
+
+
+                    var emp1 = new Employee("Sam", "Donovan", 4010, "Customer support", "Meta");
+                    var emp2= new Employee("Mark", "Ricter", 4510, "Tech Assisstant","Apple");
+
+                    emp1.subject = "Science"; // add property to object
+                    Employee.prototype.company = "CIW";
+                    emp1.displayName = function () {
+                            return this.firstName + " " + this.lastName;
+                            };
+
+                    alert("Employee:" + emp1.first + " ," + emp1.last + " " + emp1.id + " works in" + emp1.dept +  " for "  + emp1.company)
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Lab 6-1: Pop-Ups and Pup-Ups</title>
+</head>
+<body>
+    <script>
+ function nextwindow() {
+              two = window.open("optlab6-1newwindow.htm","two","toolbar=no,width=190, height=257,left=200,top=0");
+              three = window.open("optlab6-1newwindow1.htm","three","toolbar=no,width=190, height=257,left=400,top=0");
+              four = window.open("optlab6-1newwindow2.htm","four","toolbar=no,width=190, height=257,left=600,top=0");
+              five = window.open("optlab6-1newwindow3.htm","five","toolbar=no,width=190, height=257,left=0,top=286");
+              six = window.open("optlab6-1newwindow4.htm","six","toolbar=no,width=190, height=257,left=200,top=286");
+              seven = window.open("optlab6-1newwindow5.htm","seven","toolbar=no,width=190, height=257,left=400,top=286");
+              eight = window.open("optlab6-1newwindow6.htm","eight","toolbar=no,width=190, height=257,left=600,top=286");
+            }
+            function closeall() {
+              eight.close();
+              seven.close();
+              six.close();
+              five.close();
+              four.close();
+              three.close();
+              two.close();
+              window.close();
+            }
+
+
+
+
+
+    </script>
+
+</head>
+<body onload="nextwindow()">
+    <h3>Not a CIW JavaScript Specialist</h3>
+    <hr />
+    <form>
+        <input type="button" value="New Window!" onclick="closeall()" />
+    </form>
+</body>
+</html>

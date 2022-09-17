@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<a href="https://www.youtube.com/watch?v=IJ6EgdiI_wU">Generator</a>
+<body>
+    <script>
+
+        function* generateId() {
+           let id = 1
+           while (true) { 
+            
+            yield id // only available inside generator functions and is used to pause and resume
+           id++
+           }
+        }
+
+        const genObject = generateId()
+        console.log(genObject.next())
+        console.log(genObject.next())
+
+
+        function* generator(array) {
+            for(let x = 0; x < array.length; x++) {
+                yield array[x]
+            }
+        }
+        
+
+        const genObject2 = generator([1,2,3,4])
+ 
+
+
+
+
+
+
+    </script>
+</body>
+</html>

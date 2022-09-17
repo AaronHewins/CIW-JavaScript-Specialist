@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Returning values from functions</h1>
+    <hr>
+    <p>You have not been taught what the form tag is yet</p>
+    <a href="https://www.w3schools.com/tags/tag_form.asp">Form</a>
+
+</head>
+<body>
+    <script>
+
+ function returnValue() {
+    var myProduct;
+    myProduct = document.myForm.input1.value *
+     document.myForm.input2.value;
+    return myProduct;
+    }
+
+
+
+
+
+
+    </script>
+    <form name="myForm">
+        Multiply <input type="number" name="input1" title="Anything" /> By <input type="number" name="input2" title="Everyday" />
+        <input type="button" value="Result" onclick="alert('The result is ' + returnValue() + '.');" />
+    </form>
+</body>
+</html>

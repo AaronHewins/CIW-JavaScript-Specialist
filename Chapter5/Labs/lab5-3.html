@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 5-3</title>
+
+<script type="text/javascript">
+
+
+function checkGrade(form) {
+  var myGrade = form.myselect.options[form.myselect.selectedIndex].text; 
+  if(myGrade >= 91) {
+    alert("Your grade is an A.");
+  }
+  else if(myGrade >= 81 && myGrade <= 90) { 
+    alert("Your grade is a B.");
+  }
+  else {
+    alert("Your grade is a C or lower.");
+  }
+}
+ 
+ 
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<form name="myForm">
+Select numerical grade value:
+<select name="myselect" id="Lab" title="whoknows">
+
+<script>
+
+    for (var i = 100; i >= 0; i--) {
+  document.write("<option>" + i)
+}
+
+</script>
+
+</select>
+<p>
+<input type="button" value="Check Grade" onclick="checkGrade(this.form);" />
+</p>
+</form>
+
+</body>
+</html>

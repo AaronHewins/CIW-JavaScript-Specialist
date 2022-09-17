@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Window</h1>
+    <hr>
+</head>
+<body>
+    <script>
+
+       // open("https://www.w3schools.com/jsref/obj_window.asp")
+       var newWindow;
+
+    newWindow = open("","dynamicWindow","toolbar=1,location=1");
+
+    newWindow.document.open();
+    newWindow.document.write("<p><strong>Some text for the new window. </strong></p>");
+    newWindow.document.write("<form src='myPic.jpg' height='150' width='150' />");
+    newWindow.document.close();
+    </script>
+</body>
+</html>

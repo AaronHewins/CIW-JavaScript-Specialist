@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 5-2a</title>
+
+<script>
+
+
+function checkGrade(form) {
+  var myGrade = parseFloat(form.myText.value);
+  var attempts = 1;
+  
+  
+  while (isNaN(myGrade) && attempts <= 2) {
+    myGrade = parseFloat(prompt("Please enter a numerical grade value: ", ""));
+	attempts++;
+  }
+  
+  if(isNaN(myGrade) && attempts === 3) return;
+
+  if(myGrade >= 91) {
+    alert("Your grade is an A.");
+  }
+  else if(myGrade >= 81 && myGrade <= 90) { 
+    alert("Your grade is a B.");
+  }
+  else {
+    alert("Your grade is a C or lower.");
+  }
+}
+
+
+</script>
+
+</head>
+<body>
+
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<form name="myForm">
+Enter numerical grade value:
+<input type="text" name="myText" size="10" title="This" />
+<p>
+<input type="button" value="Check Grade" onclick="checkGrade(this.form);" />
+</p>
+</form>
+
+</body>
+</html>

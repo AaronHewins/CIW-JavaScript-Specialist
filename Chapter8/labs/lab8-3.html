@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 8-3</title>
+
+<script>
+
+    
+function* integer() {
+           let num = 1
+           while (true) { 
+            
+            yield num // only available inside generator functions and is used to pause and resume
+           num++
+           }
+          
+        }
+
+        var get = integer()
+        
+           for (x = 0; x < 5; x++) {
+
+            document.write(get.next().value)
+           }
+
+</script>
+</head>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+
+</body>
+</html>

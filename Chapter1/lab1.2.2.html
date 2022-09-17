@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Specialist</title>
+    <h1>JS Special Kid</h1>
+    <hr>
+    <h2>Displaying an Object</h2>
+    <p id = "object"> </p>
+
+    
+    <a href="https://www.w3schools.com/Js/js_object_display.asp">Click here to learn how to display objects</a>
+
+
+</head>
+<body>
+    <script>
+        var carMake="C390"; // This is a string
+
+        var a= 34.00; // This is a number 
+        var b= 15e2; // equals to 1500
+
+        var x;
+            x == undefined; //returns true
+            x == "undefined"; //returns false
+            typeof(x) == "undefined"; //returns true
+            
+            var names = ["Mark", "Pete", "Adam"]; // standard array
+
+            var names = new Array ("Mark", "Pete", "Adam", "Aaron", "Cathy"); // using the NEW keyword 
+            //names[2] allows you to call Adam 
+          
+            var aaron = {age : 26, home :'Detroit', weight : 186} // this is an object
+
+        
+        document.getElementById("object").innerHTML = aaron.age + ", " + aaron.home + ", " + aaron.weight
+
+        </script>
+
+</html>

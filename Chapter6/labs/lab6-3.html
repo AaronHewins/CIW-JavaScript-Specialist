@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">Mouse over me</h1>
+<body>
+    <script>
+            function mouseOver() {
+        document.getElementById("demo").style.color = "red";
+        document.getElementById("demo").style.fontSize = "40px"
+        document.getElementById("sample").style.color = "red";
+        document.getElementById("sample").style.fontSize = "200px"
+        }
+
+        function mouseOut() {
+        document.getElementById("demo").style.color = "black";
+        document.getElementById("demo").style.fontSize = "20px"
+        document.getElementById("sample").style.color = "black"
+        document.getElementById("sample").style.fontSize = "100px"
+        }
+    </script>
+        <a href="https://www.CIWcertified.com" onmouseover="mouseOver()" onmouseout="mouseOut()" id="yellow">Visit CIW</a>
+        <img src="/images/Blueberries2.jpg" alt="Apples" onmouseover="mouseOver()" onmouseout="mouseOut()" id="sample" width="150" height="100">
+</body>
+
+</html>

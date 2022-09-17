@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendChild</title>
+</head>
+<a href="https://www.youtube.com/watch?v=e0ihEHxd6vI">For Dummies</a>
+<body>
+  <ul id ="myList">
+    <li>Apple</li>
+  </ul>  
+</body>
+<script>
+// Parent Element
+const myList = document.getElementById("myList")
+
+// New List Item (<li>Banana</li>)
+
+let newListItem = document.createElement("li")
+newListItem.textContent = "Banana"
+
+myList.appendChild(newListItem)
+
+ const fruitList = ["Grapes","Berries","Orange"]
+
+for ( let fruit of fruitList) {
+
+    let moreListItem = document.createElement("li")
+    moreListItem.textContent = fruit
+
+    myList.appendChild(moreListItem)
+}
+
+
+</script>
+</html>

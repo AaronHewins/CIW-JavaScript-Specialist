@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Lab 3-2</h1>
+    <hr>
+</head>
+<body>
+    <script>
+
+
+    function showName(fName, lName) {
+    var onename = prompt ("What is your first name?")
+    var secondname = prompt ("What is your last name")
+        document.write("Your first name is: ");
+        document.write(onename + "<br />");
+        document.write("Your last name is: ");
+        document.write(secondname);
+
+}
+
+
+function twoTimes() {
+    function returnValue(x , y) {
+    var myProduct = x * y
+    return myProduct;
+    }
+
+}
+
+
+
+
+
+</script>
+<form name="myForm">
+<input onclick="showName()" type="button" value="Call Function with arguments">
+<br>
+<input onclick="twoTimes()" type="button" value="Call Function with return"/>
+</form>
+
+
+</body>
+</html>

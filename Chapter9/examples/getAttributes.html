@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html> 
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Example: Getting Attributes</title> 
+  </head> 
+  <body>
+     <h3>CIW JavaScript Specialist</h3> 
+     <hr /> 
+     <div id="SetDiv" class="Aaron" title="CIW tasks"> 
+        <p>What are the attributes of this div tag?</p> 
+     </div> 
+     <a href="https://www.youtube.com/watch?v=V0S0LXvnW-o">Follow this link</a>
+     <script type="text/javascript"> 
+        
+
+      var firstDiv = document.getElementById("SetDiv") 
+
+      alert(firstDiv.getAttribute("class")) // output = Aaron
+
+      firstDiv.setAttribute("class", "Hewins") // class has been changed to Hewins
+
+      alert(firstDiv.getAttribute("class"))
+
+      firstDiv.setAttribute("alt", "New Attribute")
+
+      alert(firstDiv.getAttribute("alt"))
+      
+      firstDiv.removeAttribute("alt")
+
+      alert(firstDiv.removeAttribute("alt")) // undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </script> 
+  </body> 
+</html>

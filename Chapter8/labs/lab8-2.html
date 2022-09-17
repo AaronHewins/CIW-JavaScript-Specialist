@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 8-2</title>
+
+<script>
+
+    
+// create a class here
+class House {
+    constructor(name,brand) {
+        this.name = name
+        this.brand = brand
+        this.display = function () {
+            return this.name + " " + this.brand
+        }
+
+
+    }
+
+
+}
+
+
+ var aaron = new House ("Aaron","human")
+
+ alert(aaron.display())
+
+//-->
+</script>
+</head>
+<body onload="dev1.display()">
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+
+</body>
+</html>

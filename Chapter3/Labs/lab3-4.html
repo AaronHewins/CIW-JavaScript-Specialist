@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Lab 3-4</h1>
+    <hr>
+</head>
+<body>
+    <script>
+
+
+//Anonymous function
+var fn1 = function() { return "This is an anynymous function."; };
+document.write(fn1() + "<br />");
+
+//Prototype function
+function Pen (penColor) {
+this.penColor = penColor;
+}
+Pen.prototype.display = function () {
+document.write(this.penColor  + "<br />");
+}
+var lux = new Pen ("Blue");
+lux.display (); 
+
+//Closure function
+function display (Name) {
+var desig = "Your name is ";
+fullName= function makeDesig () {       
+return desig + Name;
+}
+return fullName();}
+document.write(display('Alex')  + "<br />");
+
+//Arrow function
+var a= (p, q) =>  p+q;
+document.write(a(10, 20) + "<br />");
+
+//Spread operator
+var x = [1, 2, 3];
+function sample (ar1, ar2, ar3) { return (ar1 + "-" + ar2 + "-" + ar3)};
+document.write(sample (7, ...x, 9));
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

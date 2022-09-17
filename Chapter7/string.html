@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<a href="https://www.w3schools.com/jsref/jsref_eval.asp">Click here</a>
+<a href="https://www.w3schools.com/jsref/jsref_regexp_digit.asp">metacharacter</a>
+<body>
+    <script>
+        
+        // DON NOT USE EVAL 
+        var x = 10;
+        var y = 20;
+        var a = eval("x * y") // output is 200
+
+        var userName = "Jose"; // 4
+
+        // userName.length
+
+
+        // SUBSTRING, INDEX, SUBSTR METHODS
+        "This is a test".indexOf("h", 0); // search for letter h starting from index 0
+        "johndoe@company.com".indexOf("@", 0); // result is 7
+        "johndoe@company.com".indexOf("doe", 5); // result is -1
+        "johndoe@company.com".indexOf("doe", 4); // result is 4 where the first letter of doe is found
+
+        "Aaron Hewins Aaron Hewins".lastIndexOf("s", 13); // starts from end position of string
+        "ABRACADABRA".lastIndexOf("ABRA", 6)
+        // SUBSTRING
+        "ABC1234XYZ".substring(3,7); // 1234
+
+        var myEmail = "gregory@someplace.com";
+        var start = myEmail.indexOf("@") + 1;
+        var myHost = myEmail.substring(start, myEmail.length); // (8, 21)
+        myHost;
+
+        var myString = "This is text.";
+        // SUBSTR method different than SUBSTRING
+        var mySubStr = myString.substr(1, 3); // (his) is the output
+        var mySubString = myString.substring(1, 3) // (hi) is the output gives you the start but wont give you end 
+        document.write(mySubStr + " " + mySubString);
+
+        // CHARAT METHOD    
+
+        "ABCDEF".charAt(3); // D
+
+        // REG EXPRESSIONS
+
+        var myRegExp = /Juan/;
+
+        var myRegExp = new RegExp("Juan");
+
+     
+
+       // alert(RegExp) /* The constructor property returns the function that created the RegExp prototype:function RegExp() { [native code] } */
+
+       var myNames = "Paul, George, Ringo, John"; // the string to be tested is passed as an argument to test()
+        var myRegExp = /John/;
+       // document.write(myRegExp.test(myNames)); // true
+        
+       // SPLIT method starts at the front of index
+       var str = "Apples are round, and apples are juicy.";
+        var splitted = str.split(" ", 3);// notice the space between " "
+        var splitt = str.split("", 3); // output is different
+        // document.write( splitted + " " + splitt)
+
+        // SLICE method 
+        var str = "Apples are round, and apples are juicy.";
+        var sliced = str.slice(0, -2); // output = Apples are round, and apples are juic
+       var sliced = str.slice(2, 0); // no output
+        var sly = str.slice(6, -4); // output = are round, and apples are ju
+
+        //SEARCH Method
+        var str="JavaScript is a scripting language. Scripting languages are often interpreted";
+        //document.write(str.search("is")); // output = 11 
+        //document.write(str.search("o")) // output = 60
+        //document.write(str.search("scripting")) // output = 16
+
+        // MATCH method
+        var str="JavaScript";
+        // document.write(str.match("Scr")); // simple match
+
+        // REPLACE method
+        var myNames = "Paul, George, Ringo, John";
+        var myRegExp = "John";
+        myNames = myNames.replace(myRegExp, "Johnny");
+        //document.write(myNames);
+
+        var values = "apple, banana, apricot";
+        document.write(values.replace(/ap/g, "AP")); // (g) global modifier replaces lowercase to uppercase
+
+        var myTeleNum = "555-123-1234";
+        var myRegExp = /\d{3}-?\d{3}-?\d{4}/; // /\d is a metacharacter repesents anu number 0-9, ? counting metachracter, {3} represents count of 3 by d
+        document.write(myRegExp.test(myTeleNum));
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+      border: 1px solid black;
+      padding:8px;
+    }
+    </style>
+<body>
+    <a href="https://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp">For Dummies</a>
+    <h1>The Document Object</h1>
+<h2>The getElementsByClassName() Method</h2>
+
+<p>Change the text of the first element with class="example":</p>
+
+<div class="example">Element1</div>
+<div class="example">Element2</div>
+<hr>
+<p>Change the background color of the first element with the classes "example" and "color":</p>
+
+<div class="example">
+  <p>This is a paragraph.</p>
+</div>
+<br>
+<div class="example color">
+  <p>This is a paragraph.</p>
+</div>
+<br>
+<div class="example color">
+  <p>This is a paragraph.</p>
+</div>
+</body>
+
+<script>
+    const collection = document.getElementsByClassName("example");
+    collection[0].innerHTML = "Hello World!";
+
+
+    const onecollect = document.getElementsByClassName("example color");
+onecollect[0].style.backgroundColor = "red";
+    </script>
+
+
+</html>

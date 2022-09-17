@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p>Click the button. Wait 3 seconds for alert "Hello".</p>
+
+<button onclick="myFunction()">Try it</button>
+</head>
+<body>
+    <script>
+
+        var myDateObject = new Date();
+         //alert(myDateObject); // output = Tue Aug 23 2022 22:36:17 GMT+0200 (Central European Summer Time)
+
+        var myDateObject = new Date();
+        var myDay = myDateObject.getDate();
+        //alert(myDay); // output = current day of the month
+
+        //open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date")
+
+        const date = new Date();
+        const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()];
+        const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+
+
+        let timeout;
+
+        function myFunction() {
+        timeout = setTimeout(alertFunc, 3000);
+        }
+
+        function alertFunc() {
+        alert("Hello!");
+        }
+
+    </script>
+</body>
+</html>

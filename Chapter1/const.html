@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Const</title>
+    <h1>Const</h1>
+    <hr>
+</head>
+<body>
+    <script>
+
+const CONST1 = 15; // define CONST1 as a constant and give it a value
+
+CONST1 = 10; // trying to assign another value to CONST1 throws an error
+
+
+
+if (CONST1 === 15) {     // observe the nature of block scoping
+
+  let CONST1 = 24; // creating a block scoped CONST1 variable is ok
+
+}
+
+
+
+
+
+    </script>
+</body>
+</html>

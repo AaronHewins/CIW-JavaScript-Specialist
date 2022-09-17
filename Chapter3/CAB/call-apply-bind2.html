@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>CIW JS Special Kid</h1>
+    <hr>
+</head>
+<body>
+    <script>
+var fruit = ["oranges", "pears"]; // array to be used by the apply() method
+var obj1 = { x: "object reference 1" }; // object 1
+var obj2 = { x: "object reference 2" }; // object 2
+var getValueLater = example.bind(obj2, "kiwis", "papayas");
+var x = "global reference"; // global variable
+
+function example(arg1, arg2) {
+    return this.x + " arg1: " + arg1 + " arg2: " + arg2; // Value of this is dependent on how function is called
+}
+
+example("pineapples", "grapefruit"); // Returns 'global reference arg1: pineapples arg2: grapefruit'
+example.apply(obj1, fruit); // Returns 'object reference 1 arg1: oranges arg2: pears'
+example.call(obj1, "apples", "bananas"); // Returns 'object reference 1 arg1: apples arg2: bananas'
+getValueLater(); // Returns 'object reference 2 arg1: kiwis arg2: papayas'
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

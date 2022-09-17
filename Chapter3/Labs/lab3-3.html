@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Lab 3-3</h1>
+    <hr>
+    <a href="https://bobbyhadz.com/blog/javascript-call-function-inside-function#:~:text=To%20call%20a%20function%20inside%20another%20function%2C%20define%20the%20inner,inside%20of%20the%20outer%20function.">Function inside Function</a>
+</head>
+<body>
+    <script>
+  var numCorrect = 0;
+
+function takeTest() {
+  var response = "";
+  var points = 0;
+
+  var q1 = "What company developed JavaScript?";
+  var a1 = "NETSCAPE";
+
+  var q2 = "Using JavaScript operator precedence,\n what is the result of the following expression? 2 + 4 * 6";
+  var a2 = 26;
+
+  var q3 = "With what object-oriented programming language\n is JavaScript often compared and confused?";
+  var a3 = "JAVA";
+
+  response = prompt(q1);
+  if (response) points = runningTotal((response.toUpperCase() == a1) ? 1 : 0);
+  alert(points);
+
+  response = prompt(q2);
+  if(response) points = runningTotal((response == a2) ? 1 : 0);
+  alert(points);
+
+  response = prompt(q3);
+  if (response) points = runningTotal((response.toUpperCase() == a3) ? 1 : 0);
+  alert("You answered a total of " + points + " correctly.");
+
+  numCorrect = 0;
+  points = 0;
+
+}
+function runningTotal(i) {
+  numCorrect += i;
+  return numCorrect;
+}
+
+
+
+
+
+
+
+
+</script>
+    <form>
+        <input type="button" value="take quiz" onclick="takeTest();" />
+    </form>
+</body>
+</html>

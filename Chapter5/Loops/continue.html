@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Continue</h1>
+    <hr>
+</head>
+<body>
+    <script>
+
+            var leapYears = 0;
+            var curYear = 2001;
+
+            while (curYear <= 2100) {
+              curYear++;
+
+              if (curYear % 4) continue;
+
+              leapYears++;
+              document.write(curYear + " ");
+
+            }
+
+            document.write("<br /><strong>The number of leap years from 2001 to 2100 is: </strong>" + leapYears);
+
+
+
+
+    </script>
+</body>
+</html>

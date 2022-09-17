@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function FirstObject(parameter) {}
+    //myObject is now an object of type NewObject!
+    var secondObject = new FirstObject("I am new object with same traits as the object before me");
+
+    // BLUEPRINT OBJECT
+    function productObject(id, item, description, price, image) {
+    this.id = id;
+    this.item = item;
+    this.description = description;
+    this.price = price;
+    this.image = image;
+}
+ 
+/* The keyword this is used to reference the object containing the script in which the keyword appears. 
+In this case, after the constructor function is called, the keyword this returns the specific properties for the custom
+ object to the calling statement, thus populating the new object with actual properties. This concept will become 
+ clearer when you actually create an instance of your custom object. */
+
+
+        var products = new Array();
+
+        products[0] = new productObject("cp-01","Tesla","Model 3","$66,500","images/tesla.jpg");
+
+        products[1] = new productObject("cp-02","IphoneX","Space Gray","$200.00","images/iphone.jpg");
+
+        products[2] = new productObject("cp-03","CIW Suede Jacket","Green suede, blue lettering","$110.00","images/suede.jpg");
+
+        products[3] = new productObject("cp-04","CIW Rain Jacket","Green rainproof,blue lettering","$100.00","images/rain.jpg");
+
+        products[4] = new productObject("cp-05","CIW Polo Shirt","White mesh polo,green lettering","$30.00","images/polo.jpg");
+
+
+        //document.write(products[0].id)
+
+
+
+
+
+
+
+        // CREATING OBJECTS
+        // JS is object oriented programming language and you have been creating objects this entire time
+        // you have been using global objects and accessing their methods to get certain outputs
+        // JS has many objects that are waiting to be used whenever you need to call on them. LIKE A CLOUD
+        
+        
+        
+        
+        
+        let person = new Object(); // new object created 
+        
+
+        // assign properties to object that can be called
+        person.name = "Aaron";
+        person.eyeColor = "Brown";
+        person.age = 27;
+        person.city = "Detroit"
+        person.updateAge = function(){
+            return ++person.age;
+        }
+        
+
+
+        let personTwo = {   // object
+
+            name: "Daniel",
+            eyeColor: "Blue",
+            age: 27,
+            updateAge: function(){
+                return ++person.age
+            }
+
+
+        }
+
+        // constructor object that can be used later 
+        // blueprint object for other objects
+        function Person(name, eyeColor,age){
+            this.name = name;
+            this.eyeColor = eyeColor;
+            this.age = age;
+            this.updateAge = function() {
+                return ++this.age;
+            }
+        }
+
+
+        let person01 = new Person("Aaron","Brown",26); // person01 now has access to the blueprint object and all the properties (copycat)
+        let person02 = new Person("Joe","Green",43) // person02 has now copied the blueprint object
+
+        console.log(person01.name, person01.eyeColor, person01.age, person01.updateAge())
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

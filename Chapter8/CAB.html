@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        // CALL
+var emp1= {
+                name:"Mark",
+                id: "54",
+                display: function() {
+                return this.name + this.id;
+                }
+                }
+                var newObj = { name:"Pete", id:"55" }
+                //APPLY
+
+                emp1.display.call(newObj); // Will return "Pete55"
+
+                var num = [4,1,5,2,7,3,6];
+                var min = Math.min.apply(null, num); // returns 1
+                
+
+
+
+                // BIND
+                this.a = 5; // this -> global "window" object
+                var bnd = {
+                    a: 10,
+                    getA: function () {
+                        return this.a;
+                    },
+                };
+
+                var valA = bnd.getA;
+
+                // Create a new function with 'this' bound to bnd
+                var bndGetA = valA.bind(bnd);
+                bndGetA(); // 10
+                //Without the bind statement, bndGetA() will return 5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

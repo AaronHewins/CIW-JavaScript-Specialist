@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <a href="https://www.w3schools.com/jsref/met_document_getelementsbytagname.asp">Click HERE</a>
+<title>Example: getElementsByTagName</title>
+
+</head>
+<h1>The Document Object</h1>
+<h2>The getElementsByTagName() Method</h2>
+
+<p>An unordered list:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<p>The innerHTML of the second li element is:</p>
+<p id="demo"></p>
+<br>
+<hr>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<body>
+ <script>
+
+
+const collection = document.getElementsByTagName("li");
+document.getElementById("demo").innerHTML = collection[0].innerHTML;
+
+
+document.getElementsByTagName("p")[5].innerHTML = "Hello World!"; //change element
+
+
+
+
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

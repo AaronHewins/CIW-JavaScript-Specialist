@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<a href="https://www.w3schools.com/jsref/met_doc_getelementsbyname.asp">Click ME</a>
+<title>Example: getElementsByName</title>
+<h1>The Document Object</h1>
+<h2>The document.getElementsByName Method</h2>
+
+<p>First Name: <input  name="fname" title="fname1" type="text" value="Michael"></p>
+<p>First Name: <input name="fname" title="fname2" type="text" value="Doug"></p>
+
+<p>The tag name of the first element with the name "fname" is:</p>
+
+<p id="demo"></p>
+<hr>
+   <script type="text/javascript">
+
+        let elements = document.getElementsByName("fname");
+        document.getElementById("demo").innerHTML = elements[0].tagName;
+            
+    </script>
+</head>
+
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+</body>
+</html>

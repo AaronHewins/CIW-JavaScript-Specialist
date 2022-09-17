@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 9-1</title>
+
+<script type="text/javascript">
+
+function changeButton()
+{
+  if(document.getElementById('radiobuttonWebdev').checked === true)
+  {
+	radioButton = document.getElementById('radiobuttonWebdev').value;
+	var header = document.getElementById('radiobuttonWebdev').value.innerHTML = "Web Developer!";
+	alert("Hello " + header);
+  }
+  if(document.getElementById('radiobuttonGovernment').checked === true)
+  {
+	radioButton = document.getElementById('radiobuttonGovernment').value;
+	var header = document.getElementById('radiobuttonWebdev').value.innerHTML = "Uncle Sam!";
+	alert("Hello " + header);
+  }
+  getTest();
+}
+
+</script>
+</head>
+
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<form>
+<p>Please select your favorite type of Web site:</p>
+<input id="radiobuttonWebdev" title="webdev"  type="radio" name="group1" value="Web_Development" checked>Web Development</input><br />
+<input id="radiobuttonGovernment" title="gov" type="radio" name="group1" value="Government">U.S. Government</input><br />
+<input id="a" type="radio" title="a" name="group1" value="A">A</input><br />
+<input id="b" type="radio" title="b" name="group1" value="B">B</input><br />
+<input id="c" type="radio" title="c" name="group1" value="C">C</input><br />
+
+
+<script type="text/javascript">
+
+function getTest()
+{
+  document.write("<h3>CIW JavaScript Specialist</h3>");
+  document.write("<hr />");
+
+  if(radioButton == "Web_Development")
+  {
+	document.write("<p>Here's a great site for Web developers:</p><a href=http://www.CIWcertified.com/>CIW Certified</a>");
+  }
+	
+  if(radioButton == "Government")
+  {
+	document.write("<p>Here's a great site if you're interested in U.S. government:</p><a href=http://www.whitehouse.gov/>The White House</a>");
+  }
+}
+
+</script>
+
+<p>
+<input type="button" onclick="changeButton()" value="Click Here" />
+</p>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+    <h1>Closure Function</h1>
+    <hr>
+</head>
+<body>
+    <script>
+        function firstName(name) {
+        var yourName = "Your name is ";
+
+        fullName = function getName() {
+        return yourName + name;
+    };
+        return fullName();
+}
+
+        firstName("Alex");
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

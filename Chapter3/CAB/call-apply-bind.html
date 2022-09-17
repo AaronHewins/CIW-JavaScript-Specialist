@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Call, Apply, Bind</h1>
+    <hr>
+</head>
+<body>
+    <video src="https://www.youtube.com/watch?v=75W8UPQ5l7k&t=367">Watch This</video>
+   <script>
+
+       let printFullName = function (hometown, state) {
+           document.write(this.firstName + " " + this.lastName + " from " + hometown + " , " + state)
+       }
+
+ 
+       let name = {
+    firstName: "Aaron",
+    lastName: "Hewins",
+}
+
+
+
+let name2 = {
+    firstName: "John",
+    lastName: "Hancock",
+
+}
+let printMyName = printFullName.bind(name, "Detroit", "Michigan") // bind method creates copy and stores function
+
+printFullName.call(name2, "New York", "New York") // call invokes function
+document.write("<br>")
+
+printFullName.call(name, "Detroit", "Michigan") // call invokes
+document.write("<br>")
+
+printFullName.apply(name2, ["New York", "New York"]) // apply method array list 
+document.write("<br>")
+
+printMyName()
+document.write("<br>")
+
+
+
+
+
+   </script> 
+</body>
+</html>

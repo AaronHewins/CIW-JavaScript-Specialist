@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Anonymous</h1>
+    <hr>
+</head>
+<body>
+    <script>
+        function Pen (penColor) {
+        this.penColor = penColor; // this.penColor refers to the penColor property of the object calling the function
+}
+
+
+    Pen.prototype.luck = function () {
+    console.log(this.penColor);
+}
+
+        var lux = new Pen ("Blue");
+
+        lux.luck ();
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

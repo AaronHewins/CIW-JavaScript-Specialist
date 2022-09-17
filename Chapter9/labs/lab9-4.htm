@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 9-4</title>
+</head>
+
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<div id="SetDiv" special_attribute="CIW rules!">
+<p>What are the attributes of this div tag?</p>
+</div>
+    <input type="button" value="Click Me!" onclick="getValues()" />
+    <p>Please click the button now</p>
+    <script type="text/javascript">
+        var div = null;
+        function getValues()
+        {
+            if (div == null) 
+            {
+            div = document.getElementById("SetDiv");
+            }
+            alert(div.id);  
+            alert(div.special_attribute);   
+         }   
+    </script>
+</body>
+</html>

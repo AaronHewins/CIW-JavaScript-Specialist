@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Bind Function</h1>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind">Bind Function Examples</a>
+    <hr>
+</head>
+<body>
+    <script>
+
+        this.age = 29
+        
+        const aaron = {   // aaron is object
+            age: 26,     // age property value 26
+            getAge: function() {   //getAge property value is a function
+                return this.age    // return this age
+            }
+
+        }
+        document.write(aaron.getAge()) // object aaron access getAge function retuns age property inside aaron object
+        document.write("<br>")
+        const globalShowAge = aaron.getAge; // object aaron access getAge function BUT returns global age
+        document.write(globalShowAge()) // age globally is 29 and is called
+        document.write("<br>") 
+        const secondShowAge = globalShowAge.bind(aaron) // global age binds aaron to invoke function and return age inside object aaron
+        document.write(secondShowAge()) // bind function access aaron and invokes function returns aarons age
+         
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

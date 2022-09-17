@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Optional Lab 3-2</h1>
+    <hr>
+</head>
+<body>
+    <script>
+         function vote(){
+            var t="Your favorite sport is: ";
+            for (i=0; i<document.myform.sports.length; i++)
+            {
+              if (document.myform.sports[i].checked==true){
+                t = t +document.myform.sports[i].value;
+               }
+            }
+            if (t=="Your favorite sport is: ")
+            {
+              document.getElementById("txt").value="Choose a sport";
+            } else {
+              document.getElementById("txt").value=t;
+              document.getElementById("txt1").value=t;
+              document.getElementById("txt2").value=t;
+
+              }
+            }
+            function upperCase()
+            {
+              var x=document.getElementById("txt").value;
+              document.getElementById("txt").value=x.toUpperCase();
+            }
+            function SayHello()
+            {
+              alert("Your mouse is over the text!");
+            }
+            function SayGoodbye()
+            {
+              alert("Your mouse has left the text!");
+            }
+        
+    </script>
+    <form name="myform">
+        <input type="radio" name="sports" value="Football" title="FB" />Football<br />
+        <input type="radio" name="sports" value="Hockey" title="Puck" />Hockey<br />
+        <input type="radio" name="sports" value="Auto Racing" title="Nascar" />Auto Racing<br />
+        <input type="radio" name="sports" value="MMA" title="Martial" />MMA<br />
+        <input type="radio" name="sports" value="Basketball" title="BB" />Basketball<br />
+        <input type="radio" name="sports" value="Tennis" title="racket" />Tennis<br />
+        <input type="radio" name="sports" value="Golf" title="green" />Golf<br />
+        <p><input type="button" value="VOTE" onclick="vote()" /> <input type="reset" value="RESET" /></p>
+        <p><input type="text" size="40" onblur="upperCase()" title="abc" /> Click in then out!</p>
+        <p><input type="text" size="40" onmouseover="SayHello()" title="okc" /> Hover over this field!</p>
+        <p><input type="text" size="40" onmouseout="SayGoodbye()" title="bay"/> Hover this field then away!</p>
+    </form>
+</body>
+</html>
